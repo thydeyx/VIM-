@@ -1,5 +1,6 @@
+set nocompatible              " 去除VI一致性,必须要添加
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 filetype plugin indent on
@@ -89,24 +90,23 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1   
 let g:miniBufExplModSelTarget = 1  
 let g:miniBufExplMoreThanOne=0
-map = :MBEbp<CR>
+map <F11> :MBEbp<CR>
 map <F12> :MBEbn<CR>
 
+Bundle 'altercation/vim-colors-solarized'
 syntax enable
 set background=dark
 colorscheme solarized
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 
 
 Bundle "scrooloose/nerdcommenter"
 let g:NERDAltDelims_python = 1
 let g:NERDCompactSexyComs = 1
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_server_python_interpreter='/usr/bin/python'
-"let g:ycm_server_python_interpreter='/home/sdd/tanghanyi/anaconda2/bin/python'
-"let g:ycm_server_python_interpreter='/home/sdd/tanghanyi/anaconda2/bin/python'
+let g:ycm_server_python_interpreter='/Users/tanghanyi/Software/anaconda3/bin/python'
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>*'
 set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
@@ -127,7 +127,7 @@ let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
 "let g:loaded_youcompleteme=1
 
 let g:python_author = 'TangHanYi'
-let g:python_email  = 'thydeyx@163.com'
+let g:python_email  = 'tanghanyi@bytedance.com'
 
 function HeaderPython()
 	normal 1G
