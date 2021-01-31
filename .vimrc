@@ -56,7 +56,7 @@ set incsearch
 "编码设置
 set enc=utf-8
 "设置鼠标控制页面滚动
-set mouse=a
+set mouse=r
 
 map <F5> <C-w>h "左
 map <F6> <C-w>l "右
